@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if data == 'register' %}
+
+        <form>
+           <label>Username</label> <input type="text" name="username" id="id_username"><br>
+           <label>Firstname</label> <input type="text" name="firstname" id="id_firstname"><br>
+           <label>password</label> <input type="password" maxlength="15" minlength="5" name="password" id="id_password"><br>
+           <label>phone</label> <input type="number" maxlength="10" minlength="10" name="phone" id="id_phone"><br>
+           <label>Email</label> <input type="email" name="email" id="id_email"><br>
+           <input type= "submit" value="SignUp">
+            </form>
+
+    {% elif data == 'login' %}
+        <form>
+        <label>Username</label> <input type="text" name="username" id="id_username"><br>
+        <label>password</label> <input type="password" maxlength="15" minlength="5" name="password" id="id_password"><br>
+        <input type= "submit" value="Signin">
+
+         </form>
+    {% else %}
+         <h1>sorry your command is not present</h1>
+
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{data}}</h1>
+
+    {% if data == 'RED' %}
+        <h1>stop the vehicles</h1>
+    {% elif data == 'ORANGE' %}
+        <h1>ready the vehicles</h1>
+    {% elif data == 'GREEN' %}
+        <h1>going the vehicles</h1>
+    {% else %}
+        <h1> block the route</h1>
+    {% endif %}
+    {% for i in li %}
+        <h1> add: {{i.0 | add:"piders" }}</h1>
+        <h1> cap first : {{i.0 | capfirst }}</h1>
+        <h1> cut : {{i.0 | cut:'y' }}</h1>
+        <h1> upper : {{i.0 | upper }}</h1>
+        <h1> lower: {{i.0 | lower }}</h1>
+        <h1> title: {{i.2 | title }}</h1>
+        <h1> wordcount: {{i.2 | wordcount }}</h1>
+        <h1> length: {{i.2 | length }}</h1>
+        <h1> linenumbers: {{i.2 | linenumbers }}</h1>
+        <h1> random: {{i | random }}</h1>
+        <h1> slicing: {{i.2 | slice:'7:14:1' }}</h1>
+        <h1> truncate: {{i.2 | truncatewords:1 }}</h1>
+        <h1> default: {{i.5 | default:'demo' }}</h1>
+        <h1> join: {{i.2 | join:'-' }}</h1>
+        <h1> unordered: {{i | unordered_list }}</h1>
+        <h1> first element: {{i | first }}</h1>
+        <h1> last element: {{i | last }}</h1>
+        <h1> specific element: {{i.1}}</h1>
+    {% endfor %}
+    {# <h1> block the route</h1> #}    
+
+
+</body>
+</html>
